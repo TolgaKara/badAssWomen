@@ -181,16 +181,25 @@ color: purple
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
 }
 
-.award_icon {
+/* .award_icon {
   display: block;
   font-size: 300px;
   color: #fff;
+} */
+
+.username {
+  color:purple;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 15px;
 }
 
-.username,
 .userpoints,
 .usertime {
   color: #fff;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 2rem;
   text-align: center;
   margin-top: 15px;
 }
