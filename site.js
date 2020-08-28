@@ -49,9 +49,9 @@ let questions = [
 let question_count = 0;
 let points = 0;
 
+
 window.onload = function() {
   show(question_count);
-
 };
 
 function next() {
