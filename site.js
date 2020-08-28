@@ -17,7 +17,7 @@ let questions = [
     answer: "Was an Indian Princess and British spy in World War II who became the first female wireless operator to be sent from the UK into occupied France to aid the French Resistance. She was captured after being betrayed, and executed at Dachau concentration camp. She was posthumously awarded the George Cross for her heroism, the highest civilian decoration in the United Kingdom",
     options: [
       "Was elected in 1988 as the first female Prime Minister of a Muslim majority country",
-      "Was a British spy in World War II who became the first female wireless operator to be sent from the UK into occupied France to aid the French Resistance. She was captured after being betrayed, and executed at Dachau concentration camp. She was posthumously awarded the George Cross for her heroism, the highest civilian decoration in the United Kingdom",
+      "Was an Indian Princess and British spy in World War II who became the first female wireless operator to be sent from the UK into occupied France to aid the French Resistance. She was captured after being betrayed, and executed at Dachau concentration camp. She was posthumously awarded the George Cross for her heroism, the highest civilian decoration in the United Kingdom",
       "Is a Pakistani activist for female education and the youngest Nobel Prize laureate.",
       "I don't know"
     ]
@@ -27,7 +27,7 @@ let questions = [
     question: "Who was Ismat Chughtai?",
     answer: "Was an Pakistani novelist, short story writer, and filmmaker. She is credited with giving India its first feminist literature, including one of the first stories exploring an affair between two women, arguing that all women have a right to desire and fulfillment. She was one of the leading members the anti-colonialist and Marxist Progressive Writers Movement",
     options: [
-      "Was an Indian Urdu novelist, short story writer, and filmmaker. She is credited with giving India its first feminist literature, including one of the first stories exploring an affair between two women, arguing that all women have a right to desire and fulfillment. She was one of the leading members the anti-colonialist and Marxist Progressive Writers Movement",
+      "Was an Pakistani novelist, short story writer, and filmmaker. She is credited with giving India its first feminist literature, including one of the first stories exploring an affair between two women, arguing that all women have a right to desire and fulfillment. She was one of the leading members the anti-colonialist and Marxist Progressive Writers Movement",
       "An influential poet, women's right activist and theologian of the Bábí faith in Iran. She was one of the Letters of the Living, the first group of followers of the Báb. Her life, influence and execution made her a key figure of the religion. At her execution, she declared, “You can kill me, but you cannot stop the emancipation of women",
       "Was a Berber queen and a religious and military leader who led indigenous resistance to the Muslim conquest of the Maghreb, the region then known as Numidia",
       "I don't know"
@@ -47,6 +47,7 @@ let questions = [
 ];
 
 let question_count = 0;
+
 let points = 0;
 
 
@@ -63,15 +64,19 @@ function next() {
     clearInterval(mytime);
     location.href = "end.html";
   }
-  console.log(question_count);
+  // console.log(question_count);
 
-  let user_answer = document.querySelector("li.option.active").innerHTML;
+  let user_answer = document.querySelector("li.option.active").innerText;
+  console.log(user_answer)
+  console.log(questions[question_count].answer)
   // check if the answer is right or wrong
   if (user_answer == questions[question_count].answer) {
+    console.log(points)
     points += 10;
+    console.log(points)
+
     sessionStorage.setItem("points", points);
   }
-  console.log(points);
 
   question_count++;
   show(question_count);

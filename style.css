@@ -202,5 +202,29 @@ color: purple
   font-size: 2rem;
   text-align: center;
   margin-top: 15px;
+  margin-bottom: 15px;
 }
+
+.tryAgain {
+
+  margin-top: 300px;
+  margin: 0 auto;
+}
+
+.tryAgain button {
+  padding: 20px;
+  border: none;
+  border-radius: 100px;
+  background-color: #752575bd;
+  color: white;
+  font-size: 22px;
+  font-family: monospace;
+  transition: 0.4s all;
+}
+
+/* .wrapper div {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+} */
 
