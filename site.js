@@ -44,6 +44,17 @@ let questions = [
       "I don't know"
     ]
   }
+  {
+    id: 5,
+    question: "Who is Fatima al-Fihri?",
+    answer: "Is a Muslim woman from Tunisia who founded the first known university more than 1000 years ago. The university is called 'University of al-Qarawiyyin' in Fez, Morocco.",
+    options: [
+      "Is the first woman to mountain bike in Afghanistan. In 2010, she crossed the Panjshir Valley and last year shared photos and details from her trip with Matador readers.",
+      "Is a Muslim woman from Tunisia who founded the first known university more than 1000 years ago. The university is called 'University of al-Qarawiyyin' in Fez, Morocco.",
+      "Female Iranian athlete competed in the Winter Games, where she was the only woman representing her country.",
+      "I don't know"
+    ]
+  }
 ];
 
 let question_count = 0;
@@ -57,7 +68,7 @@ window.onload = function() {
 
 function next() {
 
-   
+
   // if the question is last then redirect to final page
   if (question_count == questions.length - 1) {
     sessionStorage.setItem("time", time);
@@ -93,7 +104,7 @@ function show(count) {
   <li class="option">${second}</li>
   <li class="option">${third}</li>
   <li class="option">${fourth}</li>
-</ul> 
+</ul>
   `;
   toggleActive();
 }
